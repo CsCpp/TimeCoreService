@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Настройка системы"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/etMasterPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Мастер-пароль (Полный доступ)"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Режим восстановления сети:"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <RadioGroup
+            android:id="@+id/rgDnsMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:id="@+id/rbDnsAuto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Автоматический (Провайдер)"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbDnsCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Свой DNS (напр. dns.google)" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etRestoreDns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Хост DNS (hostname)"
+            android:visibility="gone"
+            android:layout_marginTop="5dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Дополнительно:"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <CheckBox
+            android:id="@+id/cbRestoreUsb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Восстанавливать USB отладку"
+            android:checked="true"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Если включено, при вводе пароля отладка по USB будет включаться автоматически."
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:layout_marginLeft="32dp" />
+
+        <Button
+            android:id="@+id/btnSaveSetup"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:text="СОХРАНИТЬ И ЗАПУСТИТЬ"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>
